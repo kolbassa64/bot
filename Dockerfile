@@ -1,5 +1,6 @@
-FROM node:20
+FROM node:20-alpine
 WORKDIR /opt/app
-ADD . .
+ADD *.json .
 RUN npm install
+ADD . .
 CMD [ "node", "./index.js" ]
